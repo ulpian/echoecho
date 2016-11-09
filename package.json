@@ -1,0 +1,26 @@
+{
+  "name": "echoecho",
+  "version": "1.0.0",
+  "description": "A simple test",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "api": "export NODE_CONFIG_DIR=api/config && api/node_modules/.bin/nodemon --debug api/api.js",
+    "api-test": "export NODE_CONFIG_DIR=api/config && api/node_modules/.bin/mocha api/test/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ulpian/echoecho.git"
+  },
+  "author": "Ulpian Morina <ulpianmorina@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ulpian/echoecho/issues"
+  },
+  "homepage": "https://github.com/ulpian/echoecho#readme",
+  "dependencies": {
+    "config": "^1.24.0",
+    "firebase": "^3.6.0"
+  }
+}
