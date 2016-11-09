@@ -15,7 +15,7 @@ setInterval(() => {
 
 // Listen to orders
 fdb.crs('orders').on('child_added', (snap) => {
-    let order = snap.val()
+    let order = snap.val();
 
     // Expiry data clean
     let expiry = order.payment.details.expiry.split('/');

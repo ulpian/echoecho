@@ -1,34 +1,27 @@
 'use strict';
 
-exports = module.exports = (joi, firebaseManager) => {
+const config = require('config');
+const joi = require('joi');
+const firebaseManager = require('../util/firebaseManager')(config);
+const Stripe = require('../util/stripeManager')(config);
+
+module.exports = () => {
 
     // Set firebase
-    let fb = new firebaseManager('/orders');
+    let fb = new firebaseManager('echo');
+    let stripe = new Stripe();
 
-    class Base {
-        static root() {
-            return { message: 'Echo test world!' }
+    class Orders {
+        static feed() {
+            return fb.crs('orders');
         }
 
-        static saveData(post) {
-            return fb.save(post);
-        }
-
-        static list() {
-            return new Promise((res, rej) => {
-                fb.readByKey(key)
-                .then((data) => {
-                    res(data);
-                })
-                .catch((err) => {
-                    rej(err);
-                });
-            })
+        static child(key) {
+            fdb.crs('orders')
+            let child = fdb.setChild(key)
+            return child;
         }
     }
 
-    return Base;
+    return Orders;
 };
-
-exports['@require'] = ['joi', 'util/firebaseManager'];
-exports['@singleton'] = true;
