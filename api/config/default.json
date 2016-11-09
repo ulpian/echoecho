@@ -5,6 +5,7 @@
             "apiKey": 0,
             "databaseURL": "https://zjarr-fb09f.firebaseio.com/",
             "serviceAccount": ""
-        }
+        },
+        "stripeKey": ""
     }
 }

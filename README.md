@@ -50,10 +50,11 @@ The API was written to provide a more real-world API example of solving the issu
 `npm run api-test`
 
 ### Note
-You will need to set 2 environment variables for firebase to make this test work;
+You will need to set 2 environment variables for firebase and stripe to make this test work;
 Open your `~/.profile` or `~/.bashrc` files and export;
 
 ```
 export FIREBASE_APIKEY=api key
 export FIREBASE_ACCOUNT_CRED=account credentials json file.json
+export STRIPE_KEY=stripe secret key
 ```

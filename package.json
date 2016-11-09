@@ -4,7 +4,7 @@
   "description": "A simple test",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "export NODE_CONFIG_DIR=api/config && node scripts/echo.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "api": "export NODE_CONFIG_DIR=api/config && api/node_modules/.bin/nodemon --debug api/api.js",
     "api-test": "export NODE_CONFIG_DIR=api/config && api/node_modules/.bin/mocha api/test/"
@@ -21,6 +21,7 @@
   "homepage": "https://github.com/ulpian/echoecho#readme",
   "dependencies": {
     "config": "^1.24.0",
-    "firebase": "^3.6.0"
+    "firebase": "^3.6.0",
+    "stripe": "^4.12.0"
   }
 }
